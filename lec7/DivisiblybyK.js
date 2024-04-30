@@ -10,7 +10,7 @@ const div=(num1,num2)=>{
         if(i%num2==0){
             document.getElementById("ans").append(`${i} `)
             console.log(i);
-        }
+        } null
     }
     }
    
