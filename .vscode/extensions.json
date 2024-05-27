@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "akamud.vscode-theme-onedark"
+        "akamud.vscode-theme-onedark",
+        "zhang-renyang.chat-gpt"
     ]
 }
