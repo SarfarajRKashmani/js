@@ -192,6 +192,28 @@
             }
         ];
         
+        // const quizData = [];
+
+        function addQuestion() {
+            const question = document.getElementById('question').value;
+            const option1 = document.getElementById('option1').value;
+            const option2 = document.getElementById('option2').value;
+            const option3 = document.getElementById('option3').value;
+            const option4 = document.getElementById('option4').value;
+            const correct = document.getElementById('correct').value;
+
+            const newQuestion = {
+                question: question,
+                options: [option1, option2, option3, option4],
+                correct: parseInt(correct)
+            };
+
+            questions.push(newQuestion);
+            document.getElementById('quizForm').reset();
+        }
+
+
+
         questions.map((info, i) => {
             let question = document.createElement("h2");
             question.innerHTML = `${i + 1}.  ${info.question}`;
@@ -228,3 +250,7 @@
                 option_d.style.backgroundColor = correctAnswer === "D" ? "green" : "red";
             });
         });
+
+
+
+

@@ -8,10 +8,29 @@
     <link rel="stylesheet" href="mcq.css">
 </head>
 <body>
+    <form id="quizForm">
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" required><br><br>
+
+        <label for="option1">Option 1:</label>
+        <input type="text" id="option1" name="option1" required><br><br>
+
+        <label for="option2">Option 2:</label>
+        <input type="text" id="option2" name="option2" required><br><br>
+
+        <label for="option3">Option 3:</label>
+        <input type="text" id="option3" name="option3" required><br><br>
+
+        <label for="option4">Option 4:</label>
+        <input type="text" id="option4" name="option4" required><br><br>
+
+        <label for="correct">Correct Answer (Option Number):</label>
+        <input type="number" id="correct" name="correct" min="1" max="4" required><br><br>
+
+        <button type="button" onclick="addQuestion()">Submit</button>
+    </form>
     <h1>Quiz Game</h1>
     <div id="quiz"></div>
     <script src="mcq.js"></script>
 </body>
 </html>
-
-
