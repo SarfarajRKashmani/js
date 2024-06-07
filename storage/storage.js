@@ -1,15 +1,29 @@
 let count=0
-const counter=(id,key)=>{
+let cc1,cc2,cc3,cc4
+const counter=(count,s_id,key)=>{
     count++
-    document.getElementById(id).innerHTML=(count)
+    document.getElementById(s_id).innerHTML=count
+    if(key=="key4"){
+        sessionStorage.setItem(key,count);
+    }
+    else{
+        localStorage.setItem(key,count)
+    }
 }
-const cc=()=>{
-    counter("c1","count")
-    counter("c2","count")
-    counter("c3","count")
-    counter("c4","count")
+
+
+const cc=(c_id,c,s_id,key)=>{
+    document.getElementById(c_id).addEventListener("click",()=>{
+        if(key=="key4"){
+           c= sessionStorage.getItem(key)||0;
+        }
+        else{
+          c=  localStorage.getItem(key)||0;
+        }
+        counter(c,s_id,key);
+    })
 }
-document.getElementById("heart").addEventListener("click",cc)
-document.getElementById("com").addEventListener("click",cc)
-document.getElementById("sub").addEventListener("click",cc)
-document.getElementById("share").addEventListener("click",cc)
+ cc("heart",cc1,"c1","key1")
+ cc("com",cc2,"c2","key2")
+ cc("sub",cc3,"c3","key3")
+ cc("share",cc4,"c4","key4")
