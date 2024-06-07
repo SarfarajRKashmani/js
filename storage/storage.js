@@ -1,3 +1,4 @@
+
 let count=0
 let cc1,cc2,cc3,cc4
 const counter=(count,s_id,key)=>{
@@ -10,8 +11,6 @@ const counter=(count,s_id,key)=>{
         localStorage.setItem(key,count)
     }
 }
-
-
 const cc=(c_id,c,s_id,key)=>{
     document.getElementById(c_id).addEventListener("click",()=>{
         if(key=="key4"){
@@ -21,6 +20,15 @@ const cc=(c_id,c,s_id,key)=>{
           c=  localStorage.getItem(key)||0;
         }
         counter(c,s_id,key);
+    })
+    document.addEventListener("DOMContentLoaded",()=>{
+        if(key=="key4"){
+           c= sessionStorage.getItem(key)||0;
+        }
+        else{
+          c=  localStorage.getItem(key)||0;
+        }
+        document.getElementById(s_id).innerHTML=c
     })
 }
  cc("heart",cc1,"c1","key1")
