@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+ul li a i{
+    margin-left:40px ;
+}
+.navbar{
+    --bs-navbar-padding-y:0 !important;
+}
