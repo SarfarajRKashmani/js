@@ -19,13 +19,13 @@ const handledata =(e)=>{
     else{
         alert("Login Sucessfull"+user.password)
         localStorage.setItem("isLogin",true)
-        window.location.href="/project1/project1.html"
+        window.location.href="/liveproject/liveproject.html"
     }
 }
 else{
     alert("plz Signup First")
     setTimeout(()=>{
-        window.location.href="/project1/pages/signup.html"
+        window.location.href="/liveproject/pages/signup.html"
     },2000)
 }
 }

@@ -12,7 +12,7 @@ const logg =()=>{
         })
     }
     else{
-        window.location.href="/project1/pages/login.html"
+        window.location.href="/liveproject/pages/login.html"
     }
 }
 logg()
