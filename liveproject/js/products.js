@@ -18,9 +18,9 @@ const logg =()=>{
 logg()
 let products=JSON.parse(localStorage.getItem("products"))||[]
 
-const mapper = (products) => {
-    // document.getElementById("productlist").innerHTML = "";
-    products.map((item) => {
+const mapper = (data) => {
+    document.getElementById("productslist").innerHTML = "";
+    data.map((item) => {
         let img = createtag("img", item.img);
         let title = createtag("h4", item.title);
         let price = createtag("p", item.price);
@@ -35,3 +35,37 @@ const mapper = (products) => {
 
 mapper(products);
 
+
+const handlesort=(sort)=>{
+    if (sort=="lth"){
+        let temp=products.sort((a,b)=>a.price-b.price)
+        mapper(temp);
+        console.log(temp);
+    }
+    
+    else{
+        let temp=products.sort((a,b)=>b.price-a.price)
+        mapper(temp)
+    }
+}
+
+document.getElementById("lth").addEventListener("click",()=>handlesort("lth"));
+document.getElementById("htl").addEventListener("click",()=>handlesort("htl"));
+
+const handlecategory=(category)=>{
+    let temp=products.filter((ele)=>ele.category==category)
+    mapper(temp)
+}
+document.getElementById("kids").addEventListener("click",()=>handlecategory("kids"))
+document.getElementById("men").addEventListener("click",()=>handlecategory("men"))
+document.getElementById("women").addEventListener("click",()=>handlecategory("women"))
+
+const handlesearch=(value)=>{
+    let temp=products.filter((eel)=>eel.title.includes(value))
+    mapper(temp)
+}
+const keypress=()=>{
+    let searchval=value("searchvalue")
+    handlesearch(searchval)
+}
+document.getElementById("searchvalue").addEventListener("keypress",keypress)

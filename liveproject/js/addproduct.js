@@ -20,15 +20,15 @@ logg()
 let products=JSON.parse(localStorage.getItem("products"))||[]
 const handledata=(e)=>{
     e.preventDefault()
+    let n=products.length-1
     let product={
         title:value("title"),
         price:value("price"),
         img:value("img"),
         category:value("category"),
-    
+        id:products.length==0 ? 1 :products[n].id+1
     }
     products.push(product) 
     localStorage.setItem("products",JSON.stringify(products))
-    console.log(product);
 }
 document.getElementById("productdata").addEventListener("submit",handledata)

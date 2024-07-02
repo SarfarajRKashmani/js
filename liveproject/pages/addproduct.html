@@ -10,22 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="/liveproject/css/index.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-
-        #navbar {
-            background-color: #343a40;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
         #form {
             background-color: #ffffff;
             border-radius: 10px;
@@ -84,10 +68,15 @@
         <div id="form" class="d-flex mt-5 justify-content-center p-5">
             <form id="productdata" class="border border-black d-flex flex-column justify-content-center p-5">
                 <h1>Add Products</h1><br>
-                <input type="text" id="title" placeholder="Title"><br>
-                <input type="number" id="price" placeholder="Price"><br>
-                <input type="url" id="img" placeholder="Image URL"><br>
-                <div class="dropdown border border-black d-flex flex-column justify-content-center">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="number" id="price" placeholder="Price" required>
+                <input type="url" id="img" placeholder="Image URL" required>
+                <select class="dropdown border border-black" name="" id="category">
+                    <option value="kids">Kids</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                  </select>
+                <!-- <div class="dropdown border border-black d-flex flex-column justify-content-center">
                     <button id="category" class="btn border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Category
                     </button>
@@ -96,7 +85,7 @@
                         <li><a class="dropdown-item" href="#">Kitchen Wear</a></li>
                         <li><a class="dropdown-item" href="#">Clothes</a></li>
                     </ul>
-                </div><br>
+                </div><br> -->
                 <input type="submit" id="submit">
             </form>
         </div>
