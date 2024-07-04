@@ -61,11 +61,20 @@ document.getElementById("men").addEventListener("click",()=>handlecategory("men"
 document.getElementById("women").addEventListener("click",()=>handlecategory("women"))
 
 const handlesearch=(value)=>{
-    let temp=products.filter((eel)=>eel.title.includes(value))
+    let temp=products.filter((ele)=>ele.title.includes(value))
     mapper(temp)
 }
-const keypress=()=>{
-    let searchval=value("searchvalue")
-    handlesearch(searchval)
+const handlesearchdata=(e)=>{
+    e.preventDefault();
+    let searchvalue=value("searchvalue")
+}
+const keypress=(e)=>{
+    if(e.key=="Enter"){
+        let searchval=value("searchvalue")
+        handlesearch(searchval)
+    }
+    // let searchval=value("searchvalue")
+    // handlesearch(searchval)
 }
 document.getElementById("searchvalue").addEventListener("keypress",keypress)
+document.getElementById("search").addEventListener("submit",handlesearchdata)

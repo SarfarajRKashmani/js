@@ -25,7 +25,10 @@ const navbar=(login="login",signup="signup")=>{
           <li class="nav-item">
             <a class="nav-link" href="/liveproject/pages/signup.html"> <i class="fa-solid fa-user-plus"></i>${signup}</a>
           </li>
-        
+         <li class="nav-item">
+            <a onclick="togglePopup() class="nav-link" href="/liveproject/pages/popup.html"><i class="fa-brands fa-wpforms"></i></i> popup</a>
+          </li>
+          
         </ul>
         <form class="d-flex" role="search">
           <input id="searchvalue" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
