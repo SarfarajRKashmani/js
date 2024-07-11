@@ -58,4 +58,4 @@ function wrapPartial(min, max) {
   };
 }
 
-/* shop sec swiper */
+

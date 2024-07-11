@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Royal Enfield</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-cover bg-center" style="background-image: url('background-image-url');">
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-center">Log in to your Royal Enfield account</h2>
+            <form class="mt-8 space-y-6">
+                <div class="rounded-md shadow-sm">
+                    <div>
+                        <label for="email" class="sr-only">Email/Mobile Number</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required
+                               class="relative block w-full px-3 py-2 border border-gray-300 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                               placeholder="Email/Mobile Number">
+                    </div>
+                    <div>
+                        <label for="password" class="sr-only">Password</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required
+                               class="relative block w-full px-3 py-2 border border-gray-300 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                               placeholder="Password">
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="text-sm">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit"
+                            class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Login
+                    </button>
+                </div>
+            </form>
+            <div class="text-center">
+                <p class="mt-2 text-sm text-gray-600">New to royalenfield.com?</p>
+                <a href="/projects/royal/pages/signup.html" class="text-indigo-600 hover:text-indigo-500">Create an account</a>
+            </div>
+            <div class="mt-6">
+                <div class="relative flex justify-center">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative px-4 text-sm text-gray-500 bg-white">Or sign in via</div>
+                </div>
+                <div class="grid grid-cols-2 gap-3 mt-6">
+                    <div>
+                        <button type="button"
+                                class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
+                            <svg class="w-5 h-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M23 12.1c0-.9-.1-1.8-.3-2.6H12v5.1h6.1c-.3 1.6-1.2 2.9-2.5 3.7v3h4.1c2.4-2.2 3.8-5.4 3.8-9.2z" /><path d="M12 24c3.3 0 6.1-1.1 8.1-2.9l-4.1-3c-1.1.7-2.5 1.1-4 1.1-3.1 0-5.7-2.1-6.6-5h-4v3.1C5 21.6 8.2 24 12 24z" /><path d="M5.4 14.6c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9v-3H1.3C.5 10.1 0 11.5 0 13s.5 2.9 1.3 4.1l4.1-3.1z" /><path d="M12 4.8c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.9 1.2 15.1 0 12 0 8.2 0 5 2.4 3.5 5.9l4 3.1C6.3 6.9 8.9 4.8 12 4.8z" /></svg>
+                            Sign in with Google
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button"
+                                class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50">
+                            <svg class="w-5 h-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.4C0 23.4.6 24 1.3 24h11.5v-9.3H9.6V11h3.2V8.6c0-3.1 1.9-4.8 4.7-4.8 1.3 0 2.5.1 2.9.1v3.4H17c-1.5 0-1.8.7-1.8 1.8V11h3.6l-.5 3.7h-3.1V24h6.1c.7 0 1.3-.6 1.3-1.3V1.3C24 .6 23.4 0 22.7 0z" /></svg>
+                            Sign in with Facebook
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

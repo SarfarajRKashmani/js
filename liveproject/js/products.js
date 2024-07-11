@@ -1,8 +1,36 @@
 import { createtag } from "../components/helper.js";
+import value from "../components/helper.js";
 import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML=navbar();
 let islogin=JSON.parse(localStorage.getItem("isLogin"))||false;
 let userdata=JSON.parse(localStorage.getItem("user"))
+let cart=JSON.parse(localStorage.getItem("cart"))||[]
+
+
+const isExist=(id)=>{
+    let temp=cart.filter((ele)=>ele.id==id)
+    return temp.length>0 ? true : false
+}
+
+const handleCart=(le)=>{
+    if(isExist(le.id)){
+        cart.map((item,index)=>{
+            if (item.id==le.id){
+                cart[index].qty=+1
+            }
+        })
+        alert("Qty Added To Cart")
+    }
+    else{
+        cart.push({...le,qty:1})
+        alert("Item Added To Cart")
+        document.getElementById("count").innerHTML=cart.length
+    }
+    localStorage.setItem("cart",JSON.stringify(cart))
+}
+
+
+
 
 const logg =()=>{
     if(islogin){
@@ -22,12 +50,13 @@ const mapper = (data) => {
     document.getElementById("productslist").innerHTML = "";
     data.map((item) => {
         let img = createtag("img", item.img);
+        img.setAttribute("class","imgg")
         let title = createtag("h4", item.title);
         let price = createtag("p", item.price);
         let category = createtag("p", item.category);
         let div = document.createElement("div");
         let btn = createtag("button", "Buy");
-        // btn.addEventListener("click", () => handleCart(item));
+        btn.addEventListener("click", () => handleCart(item));
         div.append(img, title, price, category, btn);
         document.getElementById("productslist").append(div);
     });
@@ -66,15 +95,17 @@ const handlesearch=(value)=>{
 }
 const handlesearchdata=(e)=>{
     e.preventDefault();
-    let searchvalue=value("searchvalue")
+    let searchval=value("searchvalue")
+    handlesearch(searchval)
 }
 const keypress=(e)=>{
-    if(e.key=="Enter"){
-        let searchval=value("searchvalue")
-        handlesearch(searchval)
-    }
-    // let searchval=value("searchvalue")
-    // handlesearch(searchval)
+    // if(e.key=="Enter"){
+    //     let searchval= value ("searchvalue")
+    //     handlesearch(searchval)
+    //     console.log(searchval);
+    // }
+    let searchval=value("searchvalue")
+    handlesearch(searchval)
 }
 document.getElementById("searchvalue").addEventListener("keypress",keypress)
 document.getElementById("search").addEventListener("submit",handlesearchdata)

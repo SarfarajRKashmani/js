@@ -10,13 +10,13 @@
 .justify-content{
     justify-content: center;
 }
-.border{
+.bod{
     border: 1px solid transparent;
 }
-.border:hover{
+.bod:hover{
     border: 1.5px solid white;
 }
-.navbar{
+.navbarr{
     height: 60px;
     background-color: #0f1111;
     color: white;
@@ -96,8 +96,8 @@ border-bottom-right-radius: 3px;
     color: #a7acb270;  
     justify-self: baseline;
 }
-/* nav box5-6*/
-.box5 a {
+/* nav boxx5-6*/
+.boxx5 a {
     font-size: 14px;
     font-weight:700;
 }

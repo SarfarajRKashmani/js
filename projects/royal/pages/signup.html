@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield Signup</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-black text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <a href="#" class="text-xl font-bold">Royal Enfield</a>
+            </div>
+            <nav class="space-x-4">
+                <a href="#" class="hover:text-gray-300">Motorcycles</a>
+                <a href="#" class="hover:text-gray-300">Shop</a>
+                <a href="#" class="hover:text-gray-300">Service</a>
+                <a href="#" class="hover:text-gray-300">Rides</a>
+                <a href="#" class="hover:text-gray-300">Our World</a>
+                <a href="#" class="hover:text-gray-300">Support</a>
+                <a href="#" class="hover:text-gray-300">Locate Us</a>
+                <a href="#" class="hover:text-gray-300">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="bg-cover bg-center h-screen" style="background-image: url('https://source.unsplash.com/1600x900/?motorcycle');">
+        <div class="container mx-auto py-16">
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                <h2 class="text-2xl font-bold mb-6">Sign up for Royal Enfield</h2>
+                <form action="#">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="First Name" class="border p-2 rounded">
+                        <input type="text" placeholder="Last Name" class="border p-2 rounded">
+                        <div class="col-span-1 md:col-span-2">
+                            <div class="flex items-center">
+                                <input type="radio" id="male" name="gender" value="male" class="mr-2">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female" class="ml-4 mr-2">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <input type="email" placeholder="Email" class="border p-2 rounded col-span-1 md:col-span-2">
+                        <input type="date" placeholder="Date of Birth" class="border p-2 rounded">
+                        <input type="password" placeholder="Password" class="border p-2 rounded">
+                        <input type="text" placeholder="Mobile Number" class="border p-2 rounded col-span-1 md:col-span-2">
+                        <div class="col-span-1 md:col-span-2">
+                            <div class="flex items-center">
+                                <input type="radio" id="yes" name="own_motorcycle" value="yes" class="mr-2">
+                                <label for="yes">Do you own a Royal Enfield Motorcycle?</label>
+                                <input type="radio" id="no" name="own_motorcycle" value="no" class="ml-4 mr-2">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <input type="checkbox" id="terms" class="mr-2">
+                        <label for="terms">I accept the terms and conditions as well as privacy policy.</label>
+                    </div>
+                    <div class="mt-6 flex flex-col md:flex-row md:space-x-4">
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Create account</button>
+                        <button type="button" class="bg-blue-800 text-white px-4 py-2 rounded mt-2 md:mt-0">Sign up with Facebook</button>
+                        <button type="button" class="bg-red-600 text-white px-4 py-2 rounded mt-2 md:mt-0">Sign up with Google</button>
+                    </div>
+                    <div class="mt-4">
+                        <p>Already have a Royal Enfield account?</p>
+                        <a href="/projects/royal/pages/login.html" class="text-blue-500">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div>
+                <h3 class="font-bold mb-2">Motorcycles</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Shotgun 650</a></li>
+                    <li><a href="#" class="hover:text-gray-400">New Himalayan</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Bullet 350</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Super Meteor 650</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Hunter 350</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Rides & Events</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Rides</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Rentals</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Tours</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Support</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Service Centres</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Stores</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Owner's Manual</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">About Us</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Since 1901</a></li>
+                    <li><a href="#" class="hover:text-gray-400">About Eicher Motors</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Become a Dealer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-4 text-center">
+            &copy; 2024 Royal Enfield. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

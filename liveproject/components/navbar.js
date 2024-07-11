@@ -25,17 +25,22 @@ const navbar=(login="login",signup="signup")=>{
           <li class="nav-item">
             <a class="nav-link" href="/liveproject/pages/signup.html"> <i class="fa-solid fa-user-plus"></i>${signup}</a>
           </li>
-         <li class="nav-item">
-            <a onclick="togglePopup() class="nav-link" href="/liveproject/pages/popup.html"><i class="fa-brands fa-wpforms"></i></i> popup</a>
-          </li>
+        
           
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" id="search">
           <input id="searchvalue" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button id="search" class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>`
 }
 export default navbar
+
+
+
+
+{/* <li class="nav-item">
+<a onclick="togglePopup() class="nav-link" href="/liveproject/pages/popup.html"><i class="fa-brands fa-wpforms"></i></i> popup</a>
+</li> */}
