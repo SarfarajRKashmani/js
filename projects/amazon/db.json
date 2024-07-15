@@ -1,14 +1,43 @@
 {
-    "users": [
-      {
-        "id": "1111",
-        "name": "sarfaraj",
-        "email": "sarfrajkashmani5@gmail.com",
-        "password": "1234567890"
-      }
-      
-    ],
-    "cart": [],
-    "products": [],
-    "orders": []
-  }
+  "users": [
+    {
+      "id": "1111",
+      "name": "sarfaraj",
+      "email": "sarfrajkashmani5@gmail.com",
+      "password": "1234567890"
+    },
+    {
+      "id": "9886",
+      "name": "sarfaraj",
+      "email": "sarfaraj@gmail.com",
+      "password": "24658163987"
+    },
+    {
+      "id": "5d3e",
+      "name": "afvgversg",
+      "email": "cewhduqe",
+      "password": "qhgtdfqedg"
+    },
+    {
+      "id": "0e4a",
+      "name": "sarfaraj",
+      "email": "sarfaraj",
+      "password": "wrffw"
+    },
+    {
+      "id": "6294",
+      "name": "eregegd",
+      "email": "egergeh@gmail.com",
+      "password": "Asdfghjkl@12345"
+    },
+    {
+      "id": "b19b",
+      "name": "sarfaraj",
+      "email": "sarfarak@gmail.com",
+      "password": "Asdfghjkl@12345"
+    }
+  ],
+  "cart": [],
+  "products": [],
+  "orders": []
+}

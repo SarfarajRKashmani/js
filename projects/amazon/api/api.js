@@ -14,14 +14,14 @@ export const userdata={
         return res;
     },
     patch: async(id,data)=>{
-        let req = await fetch(`http://localhost:3000/users/${id}`,{
+        let req = await fetch(`http://localhost:3000/users${id}`,{
             method: 'PATCH',
             headers:{"content-type": "application/json"},
             body:json.stringify(data)
         });
     },
     delete: async(id)=>{
-        let req = await fetch(`http://localhost:3000/users/${id}`,{
+        let req = await fetch(`http://localhost:3000/users${id}`,{
             method: 'DELETE'
         });
     }
