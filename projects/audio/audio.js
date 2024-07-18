@@ -83,14 +83,14 @@ const songs = [
     audio.play();
     isPlaying = true;
     playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-    // playPauseBtn.classList.replace("btn-success", "btn-danger");
+    playPauseBtn.classList.replace("btn-success", "btn-danger");
   }
   
   function pauseSong() {
     audio.pause();
     isPlaying = false;
     playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-    // playPauseBtn.classList.replace("btn-danger", "btn-success");
+    playPauseBtn.classList.replace("btn-danger", "btn-success");
   }
   
   function nextSong() {

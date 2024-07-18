@@ -28,6 +28,5 @@ const mapper=(cart)=>{
         let td3=createtag("td",item.category);
         let td4=createtag("td",item.price);
         let td5=document.createElement("td");
-        
     })
 }
