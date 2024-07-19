@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webcam</title>
+    <link rel="stylesheet" href="cam.css">
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+</head>
+<body>
+    <!-- playsinlne  -- near autoplay -->
+    <video id="webcam" autoplay    ></video>
+    <!-- <canvas id="canvas"></canvas>    -->
+    <a download onclick="takeAPicture()">Snap</a>
+</body>
+<script>
+   const webcamele=document.getElementById("webcam")
+const canvasele=document.getElementById("canvas")
+const webcam = new Webcam(webcamele,"user",canvasele);
+webcam.start();
+function takeAPicture(){
+    let picture=webcam.snap();
+    document.querySelector("a").href=picture;
+}
+</script>
+</html>

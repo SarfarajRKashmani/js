@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Exam</title>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <video id="webcam" autoplay ></video>
+        <h1>MCQ Exam</h1>
+        <button id="start-btn">Start Exam</button>
+        
+        <div id="quiz-container" class="hidden">
+            <div id="timer">30:00</div>
+            <div id="question-container">
+            </div>
+        </div>
+        <div id="result-container" class="hidden">
+            <h2>Your Score: <span id="score"></span></h2>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
