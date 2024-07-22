@@ -18,6 +18,11 @@ const logg =()=>{
 }
 logg()
 
+const handleqty=(index,opr)=>{
+    if (opr=="+"){
+        cart[index].qty+=1
+    }
+}
 const mapper=(cart)=>{
     document.getElementById("cart").innerHTML=`<i class="fa-solid fa-spinner fa-spin-pulse"></i>`
     cart.map((item,i)=>{
@@ -28,5 +33,13 @@ const mapper=(cart)=>{
         let td3=createtag("td",item.category);
         let td4=createtag("td",item.price);
         let td5=document.createElement("td");
+
+        let btn1=createtag("button","-");
+        let btn2=createtag("button",item.qty)
+        let btn3=createtag("button","+");
+        btn1.addEventListener("click",handleqty(i,"-"))
+        btn3.addEventListener("click",handleqty(i,"+"))
+        td5.append(btn1,btn2,btn3)
+        let td7=createtag
     })
 }
