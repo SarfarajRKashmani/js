@@ -1,3 +1,4 @@
 {
-    "better-comments.highlightPlainText": false
+    "better-comments.highlightPlainText": false,
+    "liveServer.settings.port": 5501
 }

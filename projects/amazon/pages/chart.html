@@ -1,154 +1,34 @@
 <!DOCTYPE html>
 <html>
+  <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<style>
-  body{
-    margin:center;
-    box-sizing: border-box; 
-    padding-left: 170px;
-  }
-  .align-items{
-    justify-content: center;
-    align-items: center;
-}
-  .box{
-    height: 600px;
-    width: 80%;
-    border-radius: 10px;
-    background-color: bisque;
-    align-items: center;
-  }
-  h2 {
-    padding: 10px;
-    color: black;
-  }
-  .charts{
-    display: flex;
-    padding: 25px;
-  padding-top: 15px;
-  }
-  .mychart1{
-    background: #4d3e3e;
-    border-radius: 5px;
-    padding-right: 10px;
-  }
-  .mychart2{
-    
-    height: 300px;
-    width: 400px;
-  }
-  
-  section{
-    display: flex;
-  }
-
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="/css/chart.css">
+<link rel="stylesheet" href="/css/style.css">
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
 <body>
-  <div class="box">
+  <div id="nbarr"></div> 
+  <div class=" box">
     <h2>Dashboard</h2>
   <section class="align-items sec1">
    <div class="charts">
     <div class="mychart1">
       <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
-
-      <script>
-      var xValues = ["India", "France", "Spain", "USA", "Argentina"];
-      var yValues = [55, 49, 44, 24, 15];
-      var barColors = [
-        "#b91d47",
-        "#00aba9",
-        "#2b5797",
-        "#e8c3b9",
-        "#1e7145"
-      ];
-      
-      new Chart("myChart1", {
-        type: "pie",
-        data: {
-          labels: xValues,
-          datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-          }]
-        },
-        options: {
-          title: {
-            display: true,
-            text: "World Wide yearly Sales 2021"
-          }
-        }
-      });
-      </script>
-      
   </div>
-
-
 <div class="mychart3">
   <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
-
-<script>
-var xValues = ["India", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = ["red", "green","blue","orange","brown"];
-
-new Chart("myChart3", {
-type: "bar",
-data: {
-  labels: xValues,
-  datasets: [{
-    backgroundColor: barColors,
-    data: yValues
-  }]
-},
-options: {
-  legend: {display: false},
-  title: {
-    display: true,
-    text: "World Wide wenders 2021"
-  }
-}
-});
-</script>
 </div>
-
    </div>
   </section>
   <section class="align-items justify-content">
    <div class="mychart2"><canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
-
-    <script>
-    var xValues = [];
-    var yValues = [];
-    generateData("Math.sin(x)", 0, 10, 0.5);
-    
-    new Chart("myChart2", {
-      type: "line",
-      data: {
-        labels: xValues,
-        datasets: [{
-          fill: false,
-          pointRadius: 2,
-          borderColor: "rgba(0,0,255,0.5)",
-          data: yValues
-        }]
-      },    
-      options: {
-        legend: {display: false},
-        title: {
-          display: true,
-          text: "y = sin(x)",
-          fontSize: 16
-        }
-      }
-    });
-    function generateData(value, i1, i2, step = 1) {
-      for (let x = i1; x <= i2; x += step) {
-        yValues.push(eval(value));
-        xValues.push(x);
-      }
-    }
-    </script></div>
+    </div>
     </section>
   </div>
+  <div id="footr" style="position: fixed!important; bottom:0; width: 100%;"></div>
 </body>
+<script type="module" src="/js/chart.js"></script>
 </html>

@@ -17,72 +17,9 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
  </head>
 <body>
-    <header>
-        <div class="navbarr ">
-            <!-- nav-box-1 -->
-            <div class="nav-logo ">
-                <div class="logo"></div>
-            </div>
-             <!-- nav-box-2 -->
-                <div class="nav-add bod">
-                    <p class="add1">Deliver to</p>
-                    <div class="add-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p class="add2">India</p>
-                    </div>
-                </div>
-                 <!-- nav-box-3 -->
-                <div class=" nav-search">
-                    <select class="search-select">
-                            <option>All</option>
-                    </select>
-                    <input placeholder="Search Amazon" class="search-input">
-                    <div class="search-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
-                 <!-- nav-box-4 -->
-                 <div class="flag bod">
-                    <img src="images/flag.png" alt="">
-                       EN
-                       <i class="fa-solid fa-caret-down"></i>
-                 </div>
-                  <!-- nav-box-5 -->
-                  <div class="bod">
-                    <a href="/pages/login.html" class="signin">Hello,sign in</a>
-                    <div class="boxx5"> <a>Accounts & lists</a> 
-                        <i class="fa-solid fa-caret-down"></i>
-                      </div>
-                  </div>
-                   <!-- nav-box-6 -->
-                   <div class="bod nav-add">
-                    <p class="signin">Returns</p>
-                    <div class="boxx5"><a>& Orders</a>
-                      </div>
-                  </div>
-                    <!-- nav-box-7 -->
-                    <div class="cart bod ">
-                        <i class="fa-solid fa-cart-shopping" ></i>
-                        Cart
-                    </div>     
-               </div>
-       </header>
-       <head>
-        <div class="b1 align-items  ">
-        <a class="bod b1-1"><i class="fa-solid fa-bars"> All</i></a> 
-        <a class="bod">Amazon miniTV</a>
-        <a class="bod">Best Sellers</a>
-        <a class="bod">Today's Deals</a>
-        <a class="bod">Mobiles</a>
-        <a class="bod">Customer Service</a>
-        <a class="bod">Electronics</a>
-        <a class="bod">New Releases</a>
-        <a class="bod">Prime<i class="fa-solid fa-caret-down"></i></a>
-        <a class="bod">Home & Kitchen</a>
-        <a class="bod" href="/projects/amazon/pages/chart.html">Dashboard</a>
-        <img class="" src="images/head.jpg" alt="">
-    </div>
-        </head>
+    <div class="zid">
+       <div id="nbarr"></div>
+       
         <!-- hero section -->
         <main>
             <!-- <div class="controls">
@@ -151,7 +88,7 @@
             <div class="swiper-slide"><div class="box">
                 <div class="box-content">
                     <h2>T-Shirt's</h2>
-                <div class="box1-img" style="background-image: url('images/box23_image.jpg');">
+                <div class="c" style="background-image: url('images/box23_image.jpg');">
                 </div>
                 <p>See more</p>
                 </div>
@@ -261,6 +198,7 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
 </div> 
+</div>
 
 <!-- Shop sec 3 -->
         <div class="shop-sec">
@@ -299,7 +237,7 @@
             <div class="box-1">
                 <div class="box-content">
                     <h2>Beauty care</h2>
-                <div class="box1-img" style="background-image: url('images/boxx5_image.jpg');">
+                <div class="box1-img" style="background-image: url('images/box5_image.jpg');">
                 </div>
                 <p>See more</p>
                 </div>
@@ -407,19 +345,7 @@
         
         </div>
 
-
-
-
-
-
-        <div class="foot text-white">
-            <div class="foot-pl-3">
-                <div class="logo6"></div>
-                <div class="icon"><i class="fa-light fa-globe"></i>English</div>
-                <div class="icon2"><i class="fa-regular fa-dollar-sign"></i>USD-Us-Doller</div>
-                <div class="flag"><img src="images/flag.png" alt="">India</div>
-            </div>
-        </div>
+       <div id="footr"></div>
        <script>
         const swiper = new Swiper('.sample-slider', {
     loop: true,
@@ -446,6 +372,7 @@
     },
 })
        </script>
-        <script src="/amazon/js/jquery.js"></script>
+        <script src="/js/jquery.js"></script>
+        <script type="module" src="/js/index.js"></script>
 </body>
 </html>

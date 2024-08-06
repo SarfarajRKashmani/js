@@ -1,3 +1,19 @@
+import { nbar,nbar_styles } from "../api/navbar.js";
+import { getele } from "../api/Helper.js";
+import { fot } from "../api/navbar.js";
+
+const nbarr=getele("nbarr");
+nbarr.innerHTML= nbar();
+
+document.addEventListener("DOMContentLoaded", function(){
+    const styletag=document.createElement("style")
+    styletag.innerHTML= nbar_styles();
+    document.head.appendChild(styletag)
+})
+
+const foot=getele("footr")
+foot.innerHTML=fot();
+
 import { userdata } from "../api/api.js";
 let arr = await userdata.get();
 const data1 = (e) => {
@@ -34,7 +50,8 @@ const data1 = (e) => {
     alert("Email already exists");
   } else {
     userdata.post(details);
-    alert("your singup is done.");
+    alert("singup Sucessfull.");
+    window.location.href="/index.html"
   }
 };
 
